@@ -72,7 +72,7 @@ def all_supplies_in_holidays(holiday_hash)
           end
         puts "  #{new_holiday.join " "}: #{data.join(", ")}"
       else
-        puts "  #{values.to_s.capitalize}: #{data.join(", ")}"
+        puts "  #{attributes.to_s.capitalize}: #{data.join(", ")}"
       end
     end
   end
