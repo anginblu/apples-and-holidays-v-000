@@ -64,9 +64,9 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |keys, values|
     puts "#{keys.to_s.capitalize}:"
-    values.each do |holiday, supplies|
-      if holiday.to_s.include? "_"
-        new_holiday = holiday.to_s.split("_")
+    values.each do |attributes, supplies|
+      if attributes.to_s.include? "_"
+        new_holiday = attributes.to_s.split("_")
           new_holiday.each do |i|
             i.to_s.capitalize!
           end
