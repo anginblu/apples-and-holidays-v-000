@@ -64,15 +64,15 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |keys, values|
     puts "#{keys.to_s.capitalize}:"
-    values.each do |attributes, supplies|
+    values.each do |attributes, data|
       if attributes.to_s.include? "_"
         new_holiday = attributes.to_s.split("_")
           new_holiday.each do |i|
             i.to_s.capitalize!
           end
-        puts "  #{new_holiday.join " "}: #{supplies.join(", ")}"
+        puts "  #{new_holiday.join " "}: #{data.join(", ")}"
       else
-        puts "  #{values.to_s.capitalize}: #{supplies.join(", ")}"
+        puts "  #{values.to_s.capitalize}: #{data.join(", ")}"
       end
     end
   end
